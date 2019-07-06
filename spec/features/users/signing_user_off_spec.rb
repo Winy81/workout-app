@@ -15,12 +15,14 @@ RSpec.feature "User sign_out" do
     fill_in "Password", with: @john.password
     click_button "Log in"
 
-    expect(page).to have_link("Log out")
+    expect(page).to have_link("Sign out")
 
-    click_link "Log out"
+    click_link "Sign out"
 
     expect(page).to have_content("Signed out successfully.")
     expect(page).to have_link("Sign in")
     expect(page).to have_link("Sign up")
 
   end
+
+end
