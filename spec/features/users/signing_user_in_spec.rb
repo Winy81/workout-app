@@ -16,7 +16,10 @@ RSpec.feature "User sign_in" do
     click_button "Log in"
 
     expect(page).to have_content("Signed in successfully.")
-    expect(page).to have_content("Signed in as #{@john.email}")
+    expect(page).to have_content("Signed in as: #{@john.email}")
+    expect(page).to have_link("Sign out")
+    expect(page).to_not have_link("Sign up")
+    expect(page).to_not have_link("Sign in")
 
   end
 

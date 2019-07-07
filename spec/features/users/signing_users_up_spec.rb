@@ -13,6 +13,9 @@ RSpec.feature "Users sign_up" do
      click_button "Sign up"
 
      expect(page).to have_content("Welcome! You have signed up successfully.")
+     expect(page).to have_link("Sign out")
+     expect(page).to_not have_link("Sign up")
+     expect(page).to_not have_link("Sign in")
 
    end
 end
