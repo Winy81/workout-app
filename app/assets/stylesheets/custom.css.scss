@@ -48,6 +48,15 @@ body{
   color: #ff0000;
 }
 
+.signed-in-users{
+  padding-top:10px;
+  padding-right:20px;
+}
+
+.signed-in-users .navbar-text{
+  color:white;
+}
+
 
 
 // Devise Error Messages
