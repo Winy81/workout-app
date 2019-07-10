@@ -23,4 +23,23 @@ RSpec.feature "User sign_in" do
 
   end
 
+  context 'Sing in unsuccessfully' do 
+    
+    scenario "wrong details" do 
+
+      visit "/"
+
+      click_link "Sign in"
+      fill_in "Email", with:"name"
+      fill_in "Password", with: "pass"
+      click_button "Log in"
+
+      expect(page).to have_content("Invalid Email or password.")
+      expect(page).to have_link("Sign up")
+      expect(page).to have_link("Sign in")
+
+    end
+
+  end
+
 end 
