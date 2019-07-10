@@ -40,6 +40,22 @@ RSpec.feature "User sign_in" do
 
     end
 
+    scenario "loged in already" do
+
+      visit "/"
+
+      click_link "Sign in"
+      fill_in "Email", with: @john.email
+      fill_in "Password", with: @john.password
+      click_button "Log in"
+
+      visit "/users/sign_in"
+
+      expect(page).to have_content("You are already signed in.")
+      expect(page).to have_content("Signed in as: #{@john.email}")
+
+    end
+
   end
 
 end 
