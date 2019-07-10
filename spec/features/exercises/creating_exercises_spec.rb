@@ -1,4 +1,4 @@
-require 'rails_hepler'
+require 'rails_helper'
 
 RSpec.feature "Creating exercise" do 
 
