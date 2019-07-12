@@ -6,8 +6,7 @@ class ExercisesController < ApplicationController
   end
 
   def new
-
-
+  	@exercise = current_user.exercise.new
   end
 
 end
