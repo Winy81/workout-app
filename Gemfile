@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '3.4.1'
 gem 'devise', '4.6.2'
 
+gem 'rb-readline'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
