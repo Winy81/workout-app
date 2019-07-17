@@ -33,13 +33,14 @@ RSpec.feature "Creating exercise" do
   	click_link "My Lounge"
   	click_link "New Workout"
   	expect(page).to have_link("Back")
-  	
+
   	fill_in "Duration (min)", with: "Lorem ipsum"
-  	fill_in "Workout Details", with: "Weight lifting"
   	fill_in "Activity date", with: "2019-07-03"
   	click_button "Create Exercise"
 
   	expect(page).to have_content("Exercise has not been created")
+  	expect(page).to have_content("Duration in min is not a number")
+  	expect(page).to have_content("Workout can't be blank")
   end
 
 end
