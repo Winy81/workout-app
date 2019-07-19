@@ -1,5 +1,4 @@
-<% content_for(:whole_page) do %>
-  <div class="col-md-7 col-xs-12">
+<div class="col-md-7 col-xs-12">
   <% unless @exercises.empty? %>
     <h1>Listing Exercises</h1>
 
@@ -42,4 +41,3 @@
       
   <%= content_tag :div, "", id: "chart", data: { workouts: @exercises } %>
 </div>
-<% end %>
