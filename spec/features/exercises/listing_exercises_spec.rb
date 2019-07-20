@@ -14,8 +14,8 @@ RSpec.feature "Listing Exercises" do
                                  workout: "Weight lifting",
                                  workout_date: 2.days.ago)
 
-    @e2 = @john.exercises.create(duration_in_min: 55,
-                                 workout: "Weight lifting",
+    @e3 = @john.exercises.create(duration_in_min: 35,
+                                 workout: "On treadmill",
                                  workout_date: 8.days.ago)
                                   
   end
