@@ -37,6 +37,8 @@ gem 'rb-readline'
 
 gem 'jquery-ui-rails', '5.0.5'
 
+gem 'd3-rails', '4.1.0'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
