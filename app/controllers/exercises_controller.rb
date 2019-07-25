@@ -25,7 +25,7 @@ class ExercisesController < ApplicationController
   end
 
   def edit
-
+  	@exercise = current_user.exercises.find(params[:id])
   end
 
   private
