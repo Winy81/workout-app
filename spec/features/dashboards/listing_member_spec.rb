@@ -11,8 +11,8 @@ RSpec.feature "Listing members" do
 
   	visit "/" 
    
-  	expect(page).to have_conent("List of Members")
-    expect(page).to have_conent("@john.full_name")
-    expect(page).to have_conent("@jane.full_name")
+  	expect(page).to have_content("List of Members")
+    expect(page).to have_content("#{@john.full_name}")
+    expect(page).to have_content("#{@jane.full_name}")
   end
 end
