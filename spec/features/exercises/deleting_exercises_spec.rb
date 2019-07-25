@@ -22,6 +22,7 @@ RSpec.feature "Deleting exercise" do
   	expect(page).not_to have_content("lorem_ipsum")
     expect(page).not_to have_content(240)
     expect(page).not_to have_content(3.day.ago)
+    expect(page).to have_content("Exercise has been deleted")
 
   end
 
