@@ -7,4 +7,12 @@ RSpec.feature "Listing members" do
   	@jane = User.create(first_name: "Jane", last_name: "Doe", email: "jane@example.com", password: "password")
   end
 
+  scenario "Listing all registered users" do 
+
+  	visit "/" 
+   
+  	expect(page).to have_conent("List of Members")
+    expect(page).to have_conent("@john.full_name")
+    expect(page).to have_conent("@jane.full_name")
+  end
 end
