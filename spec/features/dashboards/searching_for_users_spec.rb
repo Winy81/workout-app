@@ -7,4 +7,16 @@ RSpec.feature "Searching for User" do
   	@jane = User.create(first_name: "Jane", last_name: "Doe", email: "jane@example.com", password: "password")
   end
 
+  scenario "Return all with users with searched name" do 
+
+  	visit "/"
+
+  	fill_in "search_name", with:"Doe"
+  	clicl_button "Search"
+
+  	expect(page).to have_content(@john.full_name)
+  	expect(page).to have_content(@jane.full_name)
+  	expect(current_path).to eq("/dashboards/search")
+  end
+
 end
