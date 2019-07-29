@@ -12,7 +12,7 @@ RSpec.feature "Searching for User" do
   	visit "/"
 
   	fill_in "search_name", with:"Doe"
-  	clicl_button "Search"
+  	click_button "Search"
 
   	expect(page).to have_content(@john.full_name)
   	expect(page).to have_content(@jane.full_name)
