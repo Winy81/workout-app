@@ -17,4 +17,16 @@ RSpec.feature "Showing Friends Workout" do
                                  workout_date: 2.days.ago)
 
     @following = Friendship.create(user: @john, friend: @jane)
+  end
+
+  scenario "shows friend's workout for last 7 days" do
+    visit "/"
+
+    click_link "My Lounge"
+    click_link @sarah.full_name
+
+    expect(page).to have_content(@sarah.full_name + "'s Exercises")
+    expect(page).to have_content(@e2.workout)
+    expect(page).to have_css("div#chart")
+  end
 end
