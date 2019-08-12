@@ -23,9 +23,9 @@ RSpec.feature "Showing Friends Workout" do
     visit "/"
 
     click_link "My Lounge"
-    click_link @sarah.full_name
+    click_link @jane.full_name
 
-    expect(page).to have_content(@sarah.full_name + "'s Exercises")
+    expect(page).to have_content(@jane.full_name + "'s Exercises")
     expect(page).to have_content(@e2.workout)
     expect(page).to have_css("div#chart")
   end
