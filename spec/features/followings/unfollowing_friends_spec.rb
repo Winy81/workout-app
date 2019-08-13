@@ -15,4 +15,14 @@ RSpec.feature "Unfollowing Friend" do
     @following = Friendship.create(user: @john, friend: @jane)
   end
 
+  scenario "unfollowed successfully"do
+    visit "/"
+
+    click_link "My Lounge"
+    link = "a[href='/friendships/#{@following.id}'][data-method='delete']"
+    find(link).click
+
+    expect(page).to have_content(@jane.full_name + " unfollowed")
+  end
+
 end
