@@ -12,6 +12,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  after_create :create_chatroom
+  
   self.per_page = 25
 
   def full_name
