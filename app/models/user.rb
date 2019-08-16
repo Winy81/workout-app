@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   after_create :create_chatroom
-  
+
   self.per_page = 25
 
   def full_name
@@ -40,5 +40,10 @@ class User < ApplicationRecord
 
   def current_friendship(friend)
     friendships.where(friend: friend).first
+  end
+
+  def create_chatroom
+    hyphenated_username = self.full_name.split.join('-')
+    Room.create(name: hyphenated_username, user_id: self.id)
   end
 end
