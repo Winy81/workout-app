@@ -14,3 +14,22 @@ RSpec.feature "Sending a message" do
     Friendship.create(user: @jane, friend: @john)
     Friendship.create(user: @henry, friend: @john)
   end
+
+  scenario "to followers shows in chatroom window" do
+    visit '/'
+    
+    click_link "My Lounge"
+    expect(page).to have_content(@room_name)
+    
+    fill_in "message-field", with: "Hello"
+    click_button "Post"
+    
+    expect(page).to have_content("Hello")
+    
+    within("#followers") do
+      expect(page).to have_link(@sarah.full_name)
+      expect(page).to have_link(@henry.full_name)
+    end
+  end
+
+end
