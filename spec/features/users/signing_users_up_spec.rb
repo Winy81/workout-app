@@ -19,7 +19,7 @@ RSpec.feature "Users sign_up" do
      expect(page).to_not have_link("Sign up")
      expect(page).to_not have_link("Sign in")
 
-     user = User.Last
+     user = User.last
      room = user.room
      room_name = user.full_name.split(" ").join('-')
      expect(room.name).to eq(room_name)
