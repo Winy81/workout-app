@@ -5,6 +5,7 @@ class ExercisesController < ApplicationController
   def index
   	@exercises = current_user.exercises.all
     @friends = current_user.friends
+    set_current_room
   end
 
   def show
