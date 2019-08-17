@@ -6,6 +6,7 @@ class ExercisesController < ApplicationController
   	@exercises = current_user.exercises.all
     @friends = current_user.friends
     set_current_room
+    @message = Message.new
   end
 
   def show
