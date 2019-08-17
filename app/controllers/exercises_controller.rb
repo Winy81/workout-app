@@ -61,4 +61,13 @@ class ExercisesController < ApplicationController
   	@exercise = current_user.exercises.find(params[:id])
   end
 
+  def set_current_room
+    if params[:roomid]
+      @room = Room.find_by(id params[:roomid])
+    else
+      @room = current_user.room
+    end
+    session[:current_room] = @room.id if @room
+  end
+
 end
