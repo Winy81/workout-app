@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  
+  protect_from_forgery with: :exception
 
   private
 
@@ -7,5 +9,5 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_room
-  
+
 end
