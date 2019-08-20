@@ -46,7 +46,7 @@ class ExercisesController < ApplicationController
   end
 
   def destroy
-  	if @exercise.delete
+  	if @exercise.delete 
   	  flash[:alert] = "Exercise has been deleted"
   	  redirect_to user_exercises_path(current_user.id)
   	else

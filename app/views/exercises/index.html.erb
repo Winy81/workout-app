@@ -66,8 +66,8 @@
 
       <div id="form-box">
         <%= form_for @message do |f| %>
-          <%= f.text_field :body, id: 'message-field', class: 'form-control pull-left' %>
-          <%= f.submit "Post", class: 'btn btn-default', id: 'post-btn' %>
+          <%= f.text_field :body, id: 'message-field', class: 'form-control inline-block' %>
+          <%= f.submit "Post", class: 'btn btn-default btn-success btn-block', id: 'post-btn', style:'margin-bottom:5px' %>
         <% end %>
       </div>
     </div>
