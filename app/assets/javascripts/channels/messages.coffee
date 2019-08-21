@@ -9,7 +9,8 @@ App.messages = App.cable.subscriptions.create "MessagesChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    posts = $(".messages-row").length
+    $("#chat-box").append(data)
+    $("#message-field").val('')
 
   checkIn: (roomId) ->
   	if roomId
