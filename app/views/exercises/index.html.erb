@@ -61,6 +61,7 @@
       <div id="chat-box" data-channel="rooms" data-room-id=<%= current_room.id %>>
         <% @messages.each do |message| %>
           <%= render partial: 'shared/message', locals: { message: message } %>
+          <hr>
         <% end %>
       </div>    
 
@@ -74,7 +75,7 @@
   </div>
 
   <h1 class="text-center">My Friends</h1>
-
+  <div id="friends_list" class="container col-md-12">
   <% @friends.each do |friend| %>
     <div class="col-md-offset-3 col-md-4 friend_name">
       <%= link_to friend.full_name, friendship_path(current_user.current_friendship(friend)), {:style=>"font-size:115%;line-height:200%;"} %>
@@ -87,6 +88,7 @@
       </div>
     </div>
   <% end %>
+  </div>
 </div>
 
 

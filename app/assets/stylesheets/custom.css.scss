@@ -117,7 +117,7 @@ path {
   border: 1px solid #76C95B;
   margin-top: 50px;
   margin-bottom: 30px;
-  max-height:600px;
+  max-height:500px;
   overflow-y: scroll;
 }
 #chat-window header {
@@ -162,5 +162,12 @@ hr.msg {
   width:100%;
   margin-top:15px;
   margin-bottom:5px;
+}
+
+#friends_list{
+  margin-top:15px;
+  min-height:100px;
+  max-height:450px;
+  overflow-y: scroll;
 }
 
