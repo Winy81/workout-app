@@ -117,6 +117,8 @@ path {
   border: 1px solid #76C95B;
   margin-top: 50px;
   margin-bottom: 30px;
+  max-height:600px;
+  overflow-y: scroll;
 }
 #chat-window header {
   background: #76C95B;
@@ -129,6 +131,8 @@ path {
 }
 #chat-box {
   min-height: 100px;
+  max-width:1000px;
+  word-wrap:break-word;
 }
 #message-field {
   width: 96%;

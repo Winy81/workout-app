@@ -50,14 +50,14 @@
   <div id="chat-window" class="col-md-12" style="border-radius:5px">
     <header class="text-center">Channel: <%= current_room.name %></header>
 
-    <div class="col-md-2" id="followers">
+    <div class="col-md-3" id="followers">
       <% @followers.each do |follower| %>
         <%= link_to follower.user.full_name, user_exercises_path(current_user, roomId: follower.user.room.id), class: 'followers' %>
         <br />
       <% end %>
     </div>
 
-    <div class="col-md-9" id="messages-box">
+    <div class="col-md-8" id="messages-box">
       <div id="chat-box" data-channel="rooms" data-room-id=<%= current_room.id %>>
         <% @messages.each do |message| %>
           <%= render partial: 'shared/message', locals: { message: message } %>
