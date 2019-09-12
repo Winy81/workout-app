@@ -53,3 +53,12 @@ end
 
 puts "30 random exercises has been created, duration_in_min workout date is random and the owner User is one of the main 3 users."
 
+5.times do |frinedship|
+  Friendship.create!(	
+	user_id: 1,
+	friend_id: frinedship + 3
+  )
+end
+
+puts "Friendships has been created for John"
+
