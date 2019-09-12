@@ -62,3 +62,11 @@ end
 
 puts "Friendships has been created for John"
 
+5.times do |frinedship|
+  Friendship.create!(	
+	user_id: 2,
+	friend_id: frinedship + 3
+  )
+end
+
+puts "Friendships has been created for Jane"
