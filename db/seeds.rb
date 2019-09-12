@@ -24,3 +24,16 @@ User.create!(
 )
 
 puts "Henry as user has been created"
+
+
+
+
+10.times do |user|
+	User.create!(
+	  first_name: "#{user}Test", 
+	  last_name: "User", 
+	  email: "#{user}TestUser@example.com", 
+	  password: "password"
+end
+
+puts "10 random User has been created"
