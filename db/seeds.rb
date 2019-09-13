@@ -58,24 +58,19 @@ puts "30 random exercises has been created, duration_in_min workout date is rand
 	user_id: 1,
 	friend_id: frinedship + 3
   )
-end
 
-puts "Friendships has been created for John"
-
-5.times do |frinedship|
-  Friendship.create!(	
+    Friendship.create!(	
 	user_id: 2,
 	friend_id: frinedship + 3
   )
-end
 
-puts "Friendships has been created for Jane"
-
-5.times do |frinedship|
-  Friendship.create!(	
+    Friendship.create!(	
 	user_id: 3,
 	friend_id: frinedship + 3
   )
 end
 
+puts "Friendships has been created for John"
+puts "Friendships has been created for Jane"
 puts "Friendships has been created for Henry"
+
