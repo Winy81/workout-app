@@ -32,7 +32,7 @@ puts "Henry as user has been created"
 
 10.times do |user|
   User.create!(
-    first_name: "#{user}Test", 
+    first_name: "#{user}.Test", 
     last_name: "User", 
     email: "#{user}TestUser@example.com", 
     password: "password"

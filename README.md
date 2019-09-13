@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-- Workout-app --
 
-Things you may want to cover:
+Language: Ruby with RoR Database: SQlite3 Layout: Bootstrap Tests: RSpec - Capybara
 
-* Ruby version
+Usage:
 
-* System dependencies
+  Clone the repo
+  Open a terminal
+  Navigate into the app folder
+  Run: rails db:create
+  Run: rails db:migrate
+  Run: rails db:seed //if you want to test the app with data prepaired database
+  Open a browser and navigate for http://localhost:3000
+  Thats it.
 
-* Configuration
+If you deploy:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  For heroku the database have to be changed for PostgreSQL
