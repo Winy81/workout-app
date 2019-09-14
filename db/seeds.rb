@@ -30,7 +30,7 @@ puts "Henry as user has been created"
 
 
 
-10.times do |user|
+25.times do |user|
   User.create!(
     first_name: "#{user}.Test", 
     last_name: "User", 
@@ -39,7 +39,7 @@ puts "Henry as user has been created"
   )
 end
 
-puts "10 random User has been created"
+puts "20 random User has been created"
 
 
 30.times do |exercise|
@@ -53,21 +53,27 @@ end
 
 puts "30 random exercises has been created, duration_in_min workout date is random and the owner User is one of the main 3 users."
 
-5.times do |frinedship|
-  Friendship.create!(	
-	user_id: 1,
-	friend_id: frinedship + 3
-  )
-
+20.times do |frinedship|
+  if rand(0..1) == 1
     Friendship.create!(	
-	user_id: 2,
-	friend_id: frinedship + 3
-  )
+	  user_id: 1,
+    friend_id: frinedship + 3
+    )
+  end
 
-    Friendship.create!(	
-	user_id: 3,
-	friend_id: frinedship + 3
-  )
+  if rand(0..1) == 1
+    Friendship.create!( 
+    user_id: 2,
+    friend_id: frinedship + 3
+    )
+  end
+
+  if rand(0..1) == 1
+    Friendship.create!( 
+    user_id: 3,
+    friend_id: frinedship + 3
+    )
+  end
 end
 
 puts "Friendships has been created for John"
