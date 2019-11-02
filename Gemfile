@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass', '3.4.1'
-gem 'devise', '4.6.2'
+gem 'devise', '4.7.1'
 
 gem 'rb-readline'
 
